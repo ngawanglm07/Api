@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>punk </title>
+</head>
+<body>
+    <form action="/name" method="get">
+        <input name="findData" placeholder="enter to find beer" id="find">
+        <button type="submit">submit</button>
+      </form>
+    <div>
+        <ul>
+            <% posts.forEach(post =>{ %>
+                    <li>
+                        <h2><%= post.name %></h2>
+                        <h5><%= post.tagline %></h5>
+                        <h5><%= post.id %></h5>
+                        <img src="<%= post.image_url %>">
+                        <p><%= post.description %></p>
+                        <small><%= post.first_brewed %></small>
+                    </li>
+            <%   }) %>
+        </ul>
+    
+    </div>
+</body>
+</html>
